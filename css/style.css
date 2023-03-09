@@ -4,6 +4,8 @@
 *,
 *:before,
 *:after {
+  padding: 0;
+  margin: 0;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -18,7 +20,7 @@ body {
 
 h1 {
   text-align: center;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   font-family: monospace;
   font-size: 3rem;
 }
@@ -28,6 +30,7 @@ h1 {
 }
 
 .before-nav-index {
+  display: flex;
   flex-direction: column;
   background-image: url(/images/imgonline-com-ua-BrightContr-xljFwgBGngMEQ4IF.jpg);
   padding: 10rem;
@@ -61,4 +64,23 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (max-width: 699px) {
+  .before-nav-index {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: url(/images/imgonline-com-ua-BrightContr-xljFwgBGngMEQ4IF.jpg);
+    padding: 5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
 }
