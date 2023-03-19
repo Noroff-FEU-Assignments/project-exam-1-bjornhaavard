@@ -1,5 +1,6 @@
 @import url(components/nav.css);
 @import url(components/footer.css);
+@import url(components/contact.css);
 
 *,
 *:before,
@@ -12,17 +13,22 @@
 }
 
 body {
-  background-color: rgb(32, 31, 31);
+  background-color: #201f1f;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 600;
 }
 
+img {
+  width: 100%;
+}
+
 h1 {
-  text-align: center;
-  /* margin-top: 2rem; */
+  /* text-align: center; */
+
   font-family: monospace;
   font-size: 3rem;
+  margin-bottom: 6rem;
 }
 
 .nav-selected {
@@ -66,6 +72,28 @@ h1 {
   background-size: cover;
 }
 
+.welcome {
+  display: flex;
+  flex: 1 auto;
+  text-align: left;
+  font-size: 1.3rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.welcome-text {
+  background-color: rgb(22, 22, 24);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+.welcome-image {
+  max-width: 500px;
+  object-fit: contain;
+}
+
 @media (max-width: 699px) {
   .before-nav-index {
     display: flex;
@@ -76,11 +104,15 @@ h1 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    align-items: center;
+    /* align-items: center; */
     gap: 5rem;
   }
 
   h1 {
     font-size: 1.9rem;
+  }
+
+  .welcome {
+    flex-direction: column;
   }
 }
