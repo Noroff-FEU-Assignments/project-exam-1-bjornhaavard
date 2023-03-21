@@ -25,4 +25,4 @@ function renderPosts(posts, container) {
   }
 }
 
-console.log();
+console.log("testing switch case");
