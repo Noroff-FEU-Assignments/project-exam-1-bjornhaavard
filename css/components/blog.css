@@ -1,0 +1,28 @@
+.post-container {
+  display: flex;
+  /* grid-template-columns: 1fr 1fr; */
+  max-width: fit-content;
+  padding-left: 2rem;
+}
+
+.post-grid-container {
+  display: grid;
+}
+
+.post-container img {
+  max-width: 300px;
+  max-height: 300px;
+  float: left;
+  /* width: fit-content; */
+}
+
+.post-container p {
+  margin: 1rem;
+}
+
+.post-container h2 {
+  font-size: 1.8rem;
+  margin: 1rem;
+  text-align: center;
+  background-color: aqua;
+}

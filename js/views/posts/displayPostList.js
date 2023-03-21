@@ -10,14 +10,19 @@ function renderPosts(posts, container) {
     const parentElement = document.querySelector(container);
 
     posts.forEach((post) => {
-      parentElement.innerHTML += `<div id="postContainer">
-                                       <div>${post.title}</div>
+      const { title, excerpt, content } = post;
+      parentElement.innerHTML += `<div class="post-container" id="postContainer">
+                                       <div class="post-grid-container">
+
+                                        <h2>${title.rendered}</h2>
+                                        <div>${content.rendered}</div>
+                                       </div>
+                                       
                                    </div>`;
-      console.log(getPosts);
     });
   } catch (error) {
     console.log(error);
   }
 }
 
-console.log("hello");
+console.log();
