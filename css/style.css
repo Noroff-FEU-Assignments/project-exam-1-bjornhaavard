@@ -29,7 +29,7 @@ h1 {
 
   font-family: monospace;
   font-size: 3rem;
-  margin-bottom: 6rem;
+  /* margin-bottom: 6rem; */
 }
 
 .nav-selected {
@@ -40,7 +40,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   background-image: url(/images/imgonline-com-ua-BrightContr-xljFwgBGngMEQ4IF.jpg);
-  padding: 10rem;
+  padding: 6rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,7 +50,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   background-image: url(/images/pexels-vitaly-kushnir-10622712_edited.jpg);
-  padding: 10rem;
+  padding: 4rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -60,7 +60,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   background-image: url(/images/pexels-jamie-patterson-2532003_edited.jpg);
-  padding: 10rem;
+  padding: 4rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -70,7 +70,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   background-image: url(/images/pexels-eberhard-grossgasteiger-2098428_edited.jpg);
-  padding: 10rem;
+  padding: 4rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

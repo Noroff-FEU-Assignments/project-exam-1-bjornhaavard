@@ -34,10 +34,13 @@ console.log();
 function createPost(post) {
   const { title, content } = post;
   const div = document.createElement("div");
+  const aTag = document.createElement("a");
+  // aTag.document.location.href = "/blog-specific.html"
   div.classList.add("post-card");
   const heading = document.createElement("h2");
   heading.innerText = title.rendered;
   div.append(heading);
+  div.append(aTag)
   const img = getImageFromContent(content.rendered);
   div.append(img);
   return div;
