@@ -27,14 +27,14 @@ function renderPosts(posts, container) {
   }
 }
 
-<<<<<<< Updated upstream
 console.log("testing switch case");
-=======
+
 console.log();
 
 function createPost(post) {
   const { title, content } = post;
   const div = document.createElement("div");
+  div.classList.add("post-card");
   const heading = document.createElement("h2");
   heading.innerText = title.rendered;
   div.append(heading);
@@ -49,4 +49,3 @@ function getImageFromContent(html) {
   const img = parsedDocument.querySelector("img");
   return img;
 }
->>>>>>> Stashed changes

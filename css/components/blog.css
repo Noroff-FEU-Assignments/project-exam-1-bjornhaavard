@@ -1,8 +1,17 @@
 .post-container {
-  display: flex;
-  /* grid-template-columns: 1fr 1fr; */
-  max-width: fit-content;
-  padding-left: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.post-card {
+  /* margin: 2rem 2rem auto; */
+  text-align: center;
+  width: fit-content;
+  /* border: solid 3px grey; */
+  box-shadow: 5px 5px 15px -4px rgb(255, 254, 254);
 }
 
 .post-grid-container {
@@ -10,19 +19,26 @@
 }
 
 .post-container img {
-  max-width: 300px;
-  max-height: 300px;
-  float: left;
-  /* width: fit-content; */
-}
-
-.post-container p {
-  margin: 1rem;
+  /* max-width: 300px;
+  max-height: 300px; */
+  width: 70%;
+  height: 70%;
+  /* margin: 0 auto; */
 }
 
 .post-container h2 {
   font-size: 1.8rem;
-  margin: 1rem;
+  /* margin: 1rem; */
   text-align: center;
-  background-color: aqua;
+  background-color: rgb(59, 58, 57);
+}
+
+@media (max-width: 769px) {
+  .post-container {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
