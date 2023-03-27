@@ -27,22 +27,17 @@ function renderPosts(posts, container) {
   }
 }
 
-console.log("testing switch case");
-
-console.log();
-
 function createPost(post) {
   const { title, content } = post;
   const div = document.createElement("div");
-  const aTag = document.createElement("a");
-  // aTag.document.location.href = "/blog-specific.html"
-  div.classList.add("post-card");
+  const postButton = document.createElement("button");
   const heading = document.createElement("h2");
-  heading.innerText = title.rendered;
-  div.append(heading);
-  div.append(aTag)
   const img = getImageFromContent(content.rendered);
-  div.append(img);
+  div.classList.add("post-card");
+  postButton.id = "readPost";
+  postButton.innerText = "Read";
+  heading.innerText = title.rendered;
+  div.append(heading, img, postButton);
   return div;
 }
 
