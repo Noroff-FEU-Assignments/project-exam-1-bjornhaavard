@@ -33,11 +33,13 @@ function createPost(post) {
   const postButton = document.createElement("button");
   const heading = document.createElement("h2");
   const img = getImageFromContent(content.rendered);
+  const imageContainer = document.createElement("div")
   div.classList.add("post-card");
   postButton.id = "readPost";
   postButton.innerText = "Read";
   heading.innerText = title.rendered;
   div.append(heading, img, postButton);
+  imageContainer.append(img)
   return div;
 }
 
