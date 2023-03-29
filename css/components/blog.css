@@ -24,17 +24,21 @@
   /* height: fit-content; */
   /* border: solid 3px grey; */
   box-shadow: 5px 5px 15px 2px rgb(68, 67, 67);
+  box-shadow: 5px 5px 17px 6px rgb(51, 49, 49);
   /* border-radius: 50%; */
 }
 
 .image-container {
-  height: 300px;
+  width: 300px;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.post-container img {
+/* .post-container img {
   width: 90%;
   height: 80%;
-}
+} */
 
 .post-container h2 {
   font-size: 1.8rem;
@@ -42,6 +46,11 @@
   text-align: center;
   padding: 0.8rem;
   background-color: rgb(59, 58, 57);
+}
+
+#readPost {
+  margin: 10px;
+  
 }
 
 @media (max-width: 1114px) {

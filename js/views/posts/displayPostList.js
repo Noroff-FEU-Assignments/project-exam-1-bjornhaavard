@@ -38,8 +38,8 @@ function createPost(post) {
   postButton.id = "readPost";
   postButton.innerText = "Read";
   heading.innerText = title.rendered;
-  imageContainer.classList.add = "image-container"
-  imageContainer.style.backgroundImage = img.src
+  imageContainer.classList.add("image-container")
+  imageContainer.style.backgroundImage = `url(${img})`
   div.append(heading, imageContainer, postButton);
   return div;
 }
