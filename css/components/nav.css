@@ -34,7 +34,7 @@ nav a {
   .nav-menu {
     position: fixed;
     right: -100%;
-    top: 190px;
+    top: 160px;
     gap: 0;
     flex-direction: column;
     background-color: rgb(17, 17, 17);
@@ -45,7 +45,7 @@ nav a {
   }
 
   .nav-item {
-    margin: 16px 0;
+    margin: 56px 0;
   }
 
   .nav-menu.active {

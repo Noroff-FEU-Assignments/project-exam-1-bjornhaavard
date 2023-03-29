@@ -18,19 +18,16 @@
 }
 
 .post-card {
-  /* margin: 2rem 2rem auto; */
   text-align: center;
-  width: inherit;
-  /* height: fit-content; */
-  /* border: solid 3px grey; */
+  width: 350px;
   box-shadow: 5px 5px 15px 2px rgb(68, 67, 67);
   box-shadow: 5px 5px 17px 6px rgb(51, 49, 49);
   /* border-radius: 50%; */
 }
 
 .image-container {
-  width: 300px;
-  height: 200px;
+  width: 350px;
+  height: 250px;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -50,10 +47,9 @@
 
 #readPost {
   margin: 10px;
-  
 }
 
-@media (max-width: 1114px) {
+@media (max-width: 1204px) {
   .post-container {
     grid-template-columns: repeat(2, 1fr);
   }
