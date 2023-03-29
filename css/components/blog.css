@@ -27,6 +27,10 @@
   /* border-radius: 50%; */
 }
 
+.image-container {
+  height: 300px;
+}
+
 .post-container img {
   width: 90%;
   height: 80%;

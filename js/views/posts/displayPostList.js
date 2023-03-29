@@ -38,8 +38,9 @@ function createPost(post) {
   postButton.id = "readPost";
   postButton.innerText = "Read";
   heading.innerText = title.rendered;
-  div.append(heading, img, postButton);
-  imageContainer.append(img)
+  imageContainer.classList.add = "image-container"
+  imageContainer.style.backgroundImage = img.src
+  div.append(heading, imageContainer, postButton);
   return div;
 }
 
@@ -47,5 +48,5 @@ function getImageFromContent(html) {
   const parser = new DOMParser();
   const parsedDocument = parser.parseFromString(html, "text/html");
   const img = parsedDocument.querySelector("img");
-  return img;
+  return img.src;
 }
