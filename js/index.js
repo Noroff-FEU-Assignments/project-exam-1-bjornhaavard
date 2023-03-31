@@ -12,9 +12,9 @@ async function router() {
       displayPostList();
       return;
 
-    case "/blog-specific.html":
-      displayPostDetail();
-      return;
+    // case "/blog-specific.html":
+    //   displayPostDetail();
+    //   return;
   }
 }
 
