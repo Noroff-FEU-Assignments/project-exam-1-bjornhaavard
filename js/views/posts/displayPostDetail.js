@@ -1,10 +1,8 @@
-import { getPostDetails } from "../../api/posts";
+import { getPostDetails } from "../../api/posts.js";
 
 // render HTML
 
 export default async function displayPostDetail(container = "#postDetailContainer") {
-  const postButton = document.querySelectorAll("#readPost");
-
   const parentElement = document.querySelector(container);
 
   const postId = getIdFromQueryString();
@@ -32,8 +30,6 @@ function getIdFromQueryString() {
   const searchParams = url.searchParams;
   return searchParams.get("id");
 }
-
-displayPostDetail();
 
 function handlePostButtons() {
   const buttons = document.querySelectorAll("#readPost");

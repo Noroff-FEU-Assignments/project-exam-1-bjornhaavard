@@ -29,18 +29,17 @@ function renderPosts(posts, container) {
 
 function createPost(post) {
   const { title, content } = post;
-  const div = document.createElement("div");
-  const postButton = document.createElement("button");
+  const div = document.createElement("a");
+  const postButton = document.createElement("a");
   const heading = document.createElement("h2");
   const img = getImageFromContent(content.rendered);
-  const imageContainer = document.createElement("div")
+  const imageContainer = document.createElement("div");
   div.classList.add("post-card");
-  postButton.id = "readPost";
-  postButton.innerText = "Read";
   heading.innerText = title.rendered;
-  imageContainer.classList.add("image-container")
-  imageContainer.style.backgroundImage = `url(${img})`
-  div.append(heading, imageContainer, postButton);
+  imageContainer.classList.add("image-container");
+  imageContainer.style.backgroundImage = `url(${img})`;
+  div.setAttribute("href", "/blog-specific.html");
+  div.append(heading, imageContainer);
   return div;
 }
 
