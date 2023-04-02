@@ -22,7 +22,6 @@ export default async function displayPostDetail(container = "#postDetailContaine
 
                                    </div>`;
   });
-  handlePostButtons();
 }
 
 function getIdFromQueryString() {
@@ -31,11 +30,11 @@ function getIdFromQueryString() {
   return searchParams.get("id");
 }
 
-function handlePostButtons() {
-  const buttons = document.querySelectorAll("#readPost");
+// function handlePostButtons() {
+//   const buttons = document.querySelectorAll("#readPost");
 
-  buttons.forEach(function (button) {
-    button.addEventListener("click", displayPostDetail);
-    console.log(button);
-  });
-}
+//   buttons.forEach(function (button) {
+//     button.addEventListener("click", displayPostDetail);
+//     console.log(button);
+//   });
+// }

@@ -27,10 +27,35 @@ function renderPosts(posts, container) {
   }
 }
 
+// export default async function displayPostList(categoryId, container = "#postContainer") {
+//   const posts = await getPosts(categoryId);
+//   const parentElement = document.querySelector(container);
+//   const initialPosts = posts.slice(0, 6); // get the first 6 posts
+
+//   initialPosts.forEach((post) => {
+//     const blogPost = createPost(post);
+//     parentElement.appendChild(blogPost);
+//   });
+
+//   if (posts.length > 6) {
+//     // add a "Read More" button if there are more than 6 posts
+//     const readMoreButton = document.createElement("button");
+//     readMoreButton.innerText = "Read More";
+//     readMoreButton.addEventListener("click", () => {
+//       const remainingPosts = posts.slice(6); // get the remaining posts
+//       remainingPosts.forEach((post) => {
+//         const blogPost = createPost(post);
+//         parentElement.appendChild(blogPost);
+//       });
+//       readMoreButton.style.display = "none"; // hide the "Read More" button
+//     });
+//     parentElement.appendChild(readMoreButton);
+//   }
+// }
+
 function createPost(post) {
   const { title, content } = post;
   const div = document.createElement("a");
-  const postButton = document.createElement("a");
   const heading = document.createElement("h2");
   const img = getImageFromContent(content.rendered);
   const imageContainer = document.createElement("div");

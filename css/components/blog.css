@@ -7,6 +7,17 @@
   /* max-width: 1200px; */
 }
 
+.post-container a {
+  text-decoration: none;
+  color: white;
+  transition: all 600ms ease;
+}
+
+a:hover {
+  transform: scale(1.1);
+  transition: all 600ms ease;
+}
+
 .blog-main h1 {
   text-align: center;
   margin-top: 2rem;
