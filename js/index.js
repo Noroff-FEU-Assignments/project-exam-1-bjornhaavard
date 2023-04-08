@@ -10,10 +10,12 @@ async function router() {
   switch (pathname) {
     case "/blog.html":
       displayPostList();
+
       return;
 
     case "/blog-specific.html":
       displayPostDetail();
+
       return;
   }
 }

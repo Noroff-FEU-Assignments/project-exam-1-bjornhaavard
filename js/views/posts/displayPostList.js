@@ -6,56 +6,37 @@ export default async function displayPostList(categoryId, container = "#postCont
 }
 
 function renderPosts(posts, container) {
+  const parentElement = document.querySelector(container);
+  const firstPosts = posts.slice(0, 10);
+  console.log(posts);
+  firstPosts.forEach((post) => {
+    const blogPost = createPost(post);
+    parentElement.appendChild(blogPost);
+  });
 
-    
+  let index = 10;
+
+  const readMoreButton = document.createElement("button");
+  readMoreButton.classList.add("read-more");
+  readMoreButton.innerText = "Read More";
+  readMoreButton.addEventListener("click", () => {
+    const restOfThePosts = posts.slice(index, index + 2);
+    // restOfThePosts.forEach((post) => {
+    //   const blogPost = createPost(post);
+    //   parentElement.appendChild(blogPost);
+    renderPosts(restOfThePosts, container);
+    index += 2;
+    if (index >= posts.length) {
+      readMoreButton.style.display = "none";
+    }
+  });
+  if (posts.length > 9) {
     const parentElement = document.querySelector(container);
-    const firstPosts = posts.slice(0, 6);
-    
-    firstPosts.forEach((post) => {
-      const blogPost = createPost(post);
-      parentElement.appendChild(blogPost);
-     
-    });
-    if (posts.length > 6) {
-    const readMoreButton = document.createElement("button");
-    readMoreButton.innerText = "Read More";
-    readMoreButton.addEventListener ("click", () =>{
-      const restOfThePosts = posts.slice(10);
-      restOfThePosts.forEach((post) => {
-        const blogPost = createPost(post);
-        parentElement.appendChild(blogPost);
-      });
-      parentElement.appendChild(readMoreButton);
-    })
-    console.log(readMoreButton)
-  };
+    parentElement.appendChild(readMoreButton);
+  }
 }
 
-// export default async function displayPostList(categoryId, container = "#postContainer") {
-//   const posts = await getPosts(categoryId);
-//   const parentElement = document.querySelector(container);
-//   const initialPosts = posts.slice(0, 6); // get the first 6 posts
-
-//   initialPosts.forEach((post) => {
-//     const blogPost = createPost(post);
-//     parentElement.appendChild(blogPost);
-//   });
-
-//   if (posts.length > 6) {
-//     // add a "Read More" button if there are more than 6 posts
-//     const readMoreButton = document.createElement("button");
-//     readMoreButton.innerText = "Read More";
-//     readMoreButton.addEventListener("click", () => {
-//       const remainingPosts = posts.slice(6); // get the remaining posts
-//       remainingPosts.forEach((post) => {
-//         const blogPost = createPost(post);
-//         parentElement.appendChild(blogPost);
-//       });
-//       readMoreButton.style.display = "none"; // hide the "Read More" button
-//     });
-//     parentElement.appendChild(readMoreButton);
-//   }
-// }
+// console.log(firstPosts);
 
 function createPost(post) {
   const { id, title, content } = post;
