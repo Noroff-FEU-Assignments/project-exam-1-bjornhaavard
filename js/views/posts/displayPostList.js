@@ -6,25 +6,29 @@ export default async function displayPostList(categoryId, container = "#postCont
 }
 
 function renderPosts(posts, container) {
-  try {
-    const parentElement = document.querySelector(container);
 
-    posts.forEach((post) => {
+    
+    const parentElement = document.querySelector(container);
+    const firstPosts = posts.slice(0, 6);
+    
+    firstPosts.forEach((post) => {
       const blogPost = createPost(post);
       parentElement.appendChild(blogPost);
-      //   const { title, excerpt, content } = post;
-      //   parentElement.innerHTML += `<div class="post-container" id="postContainer">
-      //                                    <div class="post-grid-container">
-
-      //                                     <h2>${title.rendered}</h2>
-      //                                     <div>${content.rendered}</div>
-      //                                    </div>
-
-      //                                </div>`;
+     
     });
-  } catch (error) {
-    console.log(error);
-  }
+    if (posts.length > 6) {
+    const readMoreButton = document.createElement("button");
+    readMoreButton.innerText = "Read More";
+    readMoreButton.addEventListener ("click", () =>{
+      const restOfThePosts = posts.slice(10);
+      restOfThePosts.forEach((post) => {
+        const blogPost = createPost(post);
+        parentElement.appendChild(blogPost);
+      });
+      parentElement.appendChild(readMoreButton);
+    })
+    console.log(readMoreButton)
+  };
 }
 
 // export default async function displayPostList(categoryId, container = "#postContainer") {
@@ -54,7 +58,7 @@ function renderPosts(posts, container) {
 // }
 
 function createPost(post) {
-  const { title, content } = post;
+  const { id, title, content } = post;
   const div = document.createElement("a");
   const heading = document.createElement("h2");
   const img = getImageFromContent(content.rendered);
@@ -63,7 +67,7 @@ function createPost(post) {
   heading.innerText = title.rendered;
   imageContainer.classList.add("image-container");
   imageContainer.style.backgroundImage = `url(${img})`;
-  div.setAttribute("href", "/blog-specific.html");
+  div.setAttribute("href", `/blog-specific.html?id=${id}`);
   div.append(heading, imageContainer);
   return div;
 }

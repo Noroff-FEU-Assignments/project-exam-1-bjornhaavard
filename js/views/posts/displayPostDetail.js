@@ -9,19 +9,19 @@ export default async function displayPostDetail(container = "#postDetailContaine
 
   const post = await getPostDetails(postId);
   console.log(postId);
-  post.forEach((post) => {
-    const blogPost = createPost(post);
-    parentElement.appendChild(blogPost);
+  
+    // const blogPost = createPost(post);
+    // parentElement.innerHTML(blogPost);
     const { title, excerpt, content } = post;
-    parentElement.innerHTML += `<div class="post-container" id="postContainer">
-                                       <div class="post-grid-container">
+    parentElement.innerHTML += `<div >
+                                       <div class="post-details">
 
                                         <h2>${title.rendered}</h2>
                                         <div>${content.rendered}</div>
                                        </div>
 
                                    </div>`;
-  });
+  
 }
 
 function getIdFromQueryString() {

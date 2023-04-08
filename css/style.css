@@ -50,7 +50,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   background-image: url(/images/pexels-vitaly-kushnir-10622712_edited.jpg);
-  padding: 4rem;
+  padding: 6rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -60,7 +60,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   background-image: url(/images/pexels-jamie-patterson-2532003_edited.jpg);
-  padding: 4rem;
+  padding: 6rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -70,7 +70,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   background-image: url(/images/pexels-eberhard-grossgasteiger-2098428_edited.jpg);
-  padding: 4rem;
+  padding: 6rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -104,12 +104,42 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
     background-image: url(/images/imgonline-com-ua-BrightContr-xljFwgBGngMEQ4IF.jpg);
-    padding: 5rem;
+    padding: 3rem;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     /* align-items: center; */
     gap: 5rem;
+  }
+
+  .before-nav-about {
+    display: flex;
+    justify-content: space-between;
+    background-image: url(/images/pexels-vitaly-kushnir-10622712_edited.jpg);
+    padding: 3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .before-nav-contact {
+    display: flex;
+    justify-content: space-between;
+    background-image: url(/images/pexels-jamie-patterson-2532003_edited.jpg);
+    padding: 3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .before-nav-blog {
+    display: flex;
+    justify-content: space-between;
+    background-image: url(/images/pexels-eberhard-grossgasteiger-2098428_edited.jpg);
+    padding: 3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   h1 {
