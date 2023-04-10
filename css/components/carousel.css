@@ -11,6 +11,9 @@
 .carousel h1 {
     margin: 2rem 0 2rem 2rem;
 }
+.carousel {
+    padding: 2rem;
+}
 
 .carousel-wrapper {
     display: flex;
@@ -18,9 +21,7 @@
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    /* height: auto; */
-    max-width:1200px;
-    justify-content: center;
+    max-width:1400px;
     gap: 2rem;
 }
 
@@ -28,6 +29,7 @@
     flex: 0 0 50%;
     margin: 1rem;
     scroll-snap-align: center;
+ 
 }
 
 .carousel-prev, .carousel-next {
@@ -35,8 +37,6 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
-    /* background: none; */
-    /* border: none; */
     cursor: pointer;
     font-weight: bold;
     font-size: 1rem;
@@ -59,5 +59,8 @@
         display: flow-root;
         justify-content: center;
         align-items: center;
+    }
+    .carousel-prev, .carousel-next {
+        display: none;
     }
 }

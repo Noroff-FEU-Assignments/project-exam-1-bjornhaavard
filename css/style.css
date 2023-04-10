@@ -86,7 +86,8 @@ h1 {
   flex: 1 auto;
   text-align: left;
   font-size: 1.3rem;
-  padding: 2rem;
+  padding: 4rem 2rem 2rem 2rem;
+
   justify-content: center;
 }
 
@@ -99,7 +100,6 @@ h1 {
 }
 
 .welcome-image {
-  max-width: 500px;
   object-fit: contain;
 }
 
