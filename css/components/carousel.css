@@ -33,3 +33,12 @@
 .carousel-next {
     right: 0;
 }
+
+ @media (max-width: 500px) {
+    .carousel-wrapper {
+        overflow-x: hidden;
+        display: flow-root;
+        justify-content: center;
+        align-items: center;
+    }
+}

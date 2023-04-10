@@ -1,16 +1,35 @@
 import { getPosts } from "../../api/posts.js";
 
-export default async function displayPostList(categoryId, container = "#postContainer") {
-  const posts = await getPosts(categoryId);
-  renderPosts(posts, container);
+export default async function displayPostList() {
+  const posts = await getPosts();
+  const container = document.querySelector("#postContainer");
+  const morePosts = 10;
+  const firstPosts = posts.slice(0, 10);
+  renderPosts(firstPosts, "#postContainer");
+  if (posts.length > morePosts) {
+    const readMoreButton = document.createElement("button");
+    readMoreButton.classList.add("read-more");
+    readMoreButton.innerText = "Read More";
+    readMoreButton.dispatchEvent.add = "div";
+    readMoreButton.addEventListener("click", () => {
+      const restOfThePosts = posts.slice(-2);
+      restOfThePosts.forEach((post) => {
+        const blogPost = createPost(post);
+        container.appendChild(blogPost);
+      });
+      readMoreButton.style.display = "none";
+      // console.log(restOfThePosts);
+    });
+    container.appendChild(readMoreButton);
+  }
 }
 
-export function renderPosts(posts, container) {
+export function renderPosts(posts, selector) {
   // const parentElement = document.querySelector(container);
   // const mainSection = document.querySelector(".blog-main");
   // const firstPosts = posts.slice(0, 10);
   // console.log(posts);
-  container = document.querySelector(".blog-main")
+  const container = document.querySelector(selector)
   posts.forEach((post) => {
     const blogPost = createPost(post);
     container.appendChild(blogPost);
@@ -18,33 +37,9 @@ export function renderPosts(posts, container) {
   
 }
 
-export async function createList () {
-   const posts = await getPosts()
-   container = document.querySelector("#postContainer")
-   const morePosts = 10
-   const firstPosts = posts.slice(0, 10);
-   renderPosts(firstPosts, container)
-    if (posts.length > morePosts){
-    const readMoreButton = document.createElement("button");
-    readMoreButton.classList.add("read-more");
-    readMoreButton.innerText = "Read More";
-    readMoreButton.dispatchEvent.add = "div";
-    readMoreButton.addEventListener("click", () => {
-      
-      const restOfThePosts = posts.slice(-2);
-      restOfThePosts.forEach((post) => {
-        const blogPost = createPost(post);
-        parentElement.appendChild(blogPost);
-      });
-      readMoreButton.style.display = "none";
-      // console.log(restOfThePosts);
-    });
-    container.appendChild(readMoreButton);
-  }
-} 
-  
-  
 
+  
+  
 
 function createPost(post) {
   const { id, title, content } = post;
