@@ -77,6 +77,10 @@ a:hover {
   background-repeat: no-repeat;
 }
 
+.post-container button {
+  display: block;
+}
+
 .post-container h2 {
   font-size: 1.8rem;
 
@@ -86,7 +90,10 @@ a:hover {
 }
 
 .read-more {
-  display: block;
+  width: 39px;
+  position: relative;
+  left: 4rem;
+  text-align: center;
 }
 
 #readPost {

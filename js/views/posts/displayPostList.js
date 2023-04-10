@@ -7,6 +7,7 @@ export default async function displayPostList(categoryId, container = "#postCont
 
 function renderPosts(posts, container) {
   const parentElement = document.querySelector(container);
+  const mainSection = document.querySelector(".blog-main");
   const firstPosts = posts.slice(0, 10);
   console.log(posts);
   firstPosts.forEach((post) => {
@@ -14,29 +15,24 @@ function renderPosts(posts, container) {
     parentElement.appendChild(blogPost);
   });
 
-  let index = 10;
-
-  const readMoreButton = document.createElement("button");
-  readMoreButton.classList.add("read-more");
-  readMoreButton.innerText = "Read More";
-  readMoreButton.addEventListener("click", () => {
-    const restOfThePosts = posts.slice(index, index + 2);
-    // restOfThePosts.forEach((post) => {
-    //   const blogPost = createPost(post);
-    //   parentElement.appendChild(blogPost);
-    renderPosts(restOfThePosts, container);
-    index += 2;
-    if (index >= posts.length) {
-      readMoreButton.style.display = "none";
-    }
-  });
   if (posts.length > 9) {
-    const parentElement = document.querySelector(container);
-    parentElement.appendChild(readMoreButton);
+    const readMoreButton = document.createElement("button");
+    readMoreButton.classList.add("read-more");
+    readMoreButton.innerText = "Read More";
+    readMoreButton.dispatchEvent.add = "div";
+    readMoreButton.addEventListener("click", () => {
+      const restOfThePosts = posts.slice(-2);
+      restOfThePosts.forEach((post) => {
+        const blogPost = createPost(post);
+        parentElement.appendChild(blogPost);
+      });
+      readMoreButton.style.display = "none";
+      console.log(restOfThePosts);
+    });
+    mainSection.appendChild(readMoreButton);
   }
+  console.log(firstPosts);
 }
-
-// console.log(firstPosts);
 
 function createPost(post) {
   const { id, title, content } = post;
