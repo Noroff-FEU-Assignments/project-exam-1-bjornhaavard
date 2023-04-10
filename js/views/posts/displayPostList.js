@@ -46,6 +46,7 @@ function createPost(post) {
   imageContainer.style.backgroundImage = `url(${img})`;
   div.setAttribute("href", `/blog-specific.html?id=${id}`);
   div.append(heading, imageContainer);
+  
   return div;
 }
 

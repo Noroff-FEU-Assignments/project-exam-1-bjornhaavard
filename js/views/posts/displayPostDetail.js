@@ -12,7 +12,7 @@ export default async function displayPostDetail(container = "#postDetailContaine
   
     // const blogPost = createPost(post);
     // parentElement.innerHTML(blogPost);
-    const { title, excerpt, content } = post;
+    const { title, content } = post;
     parentElement.innerHTML += `<div >
                                        <div class="post-details">
 
