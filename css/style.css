@@ -3,6 +3,7 @@
 @import url(components/contact.css);
 @import url(components/blog.css);
 @import url(components/carousel.css);
+@import url(components/about.css);
 
 *,
 *:before,
@@ -13,6 +14,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 
 body {
   background-color: #201f1f;
@@ -104,22 +106,11 @@ h1 {
 }
 
 @media (max-width: 769px) {
-  .before-nav-index {
+  .before-nav-index, .before-nav-about, .before-nav-contact, .before-nav-blog   {
     padding: 3rem;
   }
 
-  .before-nav-about {
-    padding: 3rem;
-  }
-
-  .before-nav-contact {
-    padding: 3rem;
-  }
-
-  .before-nav-blog {
-    padding: 3rem;
-  }
-
+ 
   h1 {
     font-size: 1.9rem;
   }

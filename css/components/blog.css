@@ -16,7 +16,6 @@
 .post-detail {
   max-width: 800px;
   margin-top: 3rem;
-  /* display: flex; */
   padding: 2rem;
   margin: 5rem auto;
   background-color: #222;
@@ -35,7 +34,7 @@
   font-size: 1.1rem;
   line-height: 1.5;
   color: #ddd;
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0 1rem;
   text-align: justify;
 }
 
@@ -67,7 +66,6 @@ a:hover {
   text-align: center;
   width: 350px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-  /* border-radius: 50%; */
 }
 
 .image-container {
@@ -90,9 +88,7 @@ a:hover {
 }
 
 .read-more {
-  width: 39px;
-  position: relative;
-  left: 4rem;
+  align-self: end;
   text-align: center;
 }
 
