@@ -5,34 +5,46 @@ export default async function displayPostList(categoryId, container = "#postCont
   renderPosts(posts, container);
 }
 
-function renderPosts(posts, container) {
-  const parentElement = document.querySelector(container);
-  const mainSection = document.querySelector(".blog-main");
-  const firstPosts = posts.slice(0, 10);
-  console.log(posts);
-  firstPosts.forEach((post) => {
+export function renderPosts(posts, container) {
+  // const parentElement = document.querySelector(container);
+  // const mainSection = document.querySelector(".blog-main");
+  // const firstPosts = posts.slice(0, 10);
+  // console.log(posts);
+  container = document.querySelector(".blog-main")
+  posts.forEach((post) => {
     const blogPost = createPost(post);
-    parentElement.appendChild(blogPost);
+    container.appendChild(blogPost);
   });
+  
+}
 
-  if (posts.length > 9) {
+export async function createList () {
+   const posts = await getPosts()
+   container = document.querySelector("#postContainer")
+   const morePosts = 10
+   const firstPosts = posts.slice(0, 10);
+   renderPosts(firstPosts, container)
+    if (posts.length > morePosts){
     const readMoreButton = document.createElement("button");
     readMoreButton.classList.add("read-more");
     readMoreButton.innerText = "Read More";
     readMoreButton.dispatchEvent.add = "div";
     readMoreButton.addEventListener("click", () => {
+      
       const restOfThePosts = posts.slice(-2);
       restOfThePosts.forEach((post) => {
         const blogPost = createPost(post);
         parentElement.appendChild(blogPost);
       });
       readMoreButton.style.display = "none";
-      console.log(restOfThePosts);
+      // console.log(restOfThePosts);
     });
-    mainSection.appendChild(readMoreButton);
+    container.appendChild(readMoreButton);
   }
-  console.log(firstPosts);
-}
+} 
+  
+  
+
 
 function createPost(post) {
   const { id, title, content } = post;
@@ -46,7 +58,7 @@ function createPost(post) {
   imageContainer.style.backgroundImage = `url(${img})`;
   div.setAttribute("href", `/blog-specific.html?id=${id}`);
   div.append(heading, imageContainer);
-  
+  // console.log(post)
   return div;
 }
 
