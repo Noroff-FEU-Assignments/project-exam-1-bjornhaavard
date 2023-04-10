@@ -18,28 +18,20 @@ export default async function displayPostList() {
         container.appendChild(blogPost);
       });
       readMoreButton.style.display = "none";
-      // console.log(restOfThePosts);
     });
     container.appendChild(readMoreButton);
   }
 }
 
 export function renderPosts(posts, selector) {
-  // const parentElement = document.querySelector(container);
-  // const mainSection = document.querySelector(".blog-main");
-  // const firstPosts = posts.slice(0, 10);
-  // console.log(posts);
   const container = document.querySelector(selector)
   posts.forEach((post) => {
     const blogPost = createPost(post);
     container.appendChild(blogPost);
   });
-  
+
 }
 
-
-  
-  
 
 function createPost(post) {
   const { id, title, content } = post;
@@ -53,7 +45,6 @@ function createPost(post) {
   imageContainer.style.backgroundImage = `url(${img})`;
   div.setAttribute("href", `/blog-specific.html?id=${id}`);
   div.append(heading, imageContainer);
-  // console.log(post)
   return div;
 }
 

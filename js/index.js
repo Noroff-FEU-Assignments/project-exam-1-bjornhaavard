@@ -16,7 +16,7 @@ async function router() {
 
     case "/blog-specific.html":
       displayPostDetail();
-
+      
       return;
 
     case "/index.html":

@@ -1,5 +1,15 @@
 .carousel-container {
     position: relative;
+    display: flex;
+    justify-content: center;
+    /* max-width: 1000px; */
+    /* height: auto; */
+    /* margin: 0 auto */
+    margin: auto;
+}
+
+.carousel h1 {
+    margin: 2rem 0 2rem 2rem;
 }
 
 .carousel-wrapper {
@@ -8,10 +18,14 @@
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    /* height: auto; */
+    max-width:1200px;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .carousel-slide {
-    flex: 0 0 25%;
+    flex: 0 0 50%;
     margin: 1rem;
     scroll-snap-align: center;
 }
@@ -24,14 +38,19 @@
     /* background: none; */
     /* border: none; */
     cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 1rem;
 }
 
 .carousel-prev {
     left: 0;
+    
 }
 
 .carousel-next {
     right: 0;
+    
 }
 
  @media (max-width: 500px) {
