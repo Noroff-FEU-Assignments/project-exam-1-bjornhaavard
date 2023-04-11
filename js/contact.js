@@ -1,12 +1,13 @@
 const form = document.querySelector("#contactForm");
 const fullName = document.querySelector("#fullName");
 const fullNameError = document.querySelector("#fullNameError");
-
 const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
 const subject = document.querySelector("#subject");
-const subjectError = document.querySelector("#textError");
+const subjectError = document.querySelector("#subjectError");
 const messageSent = document.querySelector("#messageSent");
+const textArea = document.querySelector("#textArea")
+const textError = document.querySelector("#textError")
 
 function validateInput(event) {
   event.preventDefault();
@@ -28,8 +29,13 @@ function validateInput(event) {
   } else {
     subjectError.style.display = "block";
   }
+  if (checkValue(textArea.value, 25)) {
+    textError.style.display = "none";
+  } else {
+    textError.style.display = "block";
+  }
 
-  if (checkValue(fullName.value, 5) && validateEmail(email.value) && checkValue(subject.value, 10)) {
+  if (checkValue(fullName.value, 5) && validateEmail(email.value) && checkValue(subject.value, 10) && checkValue(textArea.value, 25)) {
     messageSent.innerHTML = `<div id="messageSent"> Message sent, 
                                 you will be redirected to the homepage </div>`;
     messageSent.style.display = "block";
@@ -37,7 +43,7 @@ function validateInput(event) {
     setTimeout(() => {
       // messageSent.style.display = "none";
       document.location.href = "/index.html";
-    }, 5000);
+    }, 4000); 
   }
 }
 

@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 #contactForm {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
@@ -7,7 +11,13 @@
 .contact-container {
   display: flex;
   justify-content: center;
-  
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
 .form-error {
@@ -18,12 +28,18 @@
 
 .messageContainer {
   display: none;
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: rgb(255, 255, 255);
-  background-color: rgb(213, 125, 18);
+  background-color: #222;
   text-align: center;
   margin-bottom: 1em;
+  padding: 2rem;
+
+  /* line-height: 1.5; */
+  
+  margin: 1rem 0 1rem;
+  /* text-align: justify; */
 }
 
 form {
@@ -34,8 +50,14 @@ form {
 
 input {
   display: flex;
-  padding: 1rem 4rem;
+  padding: 1rem 2rem;
   margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+textarea {
+  font-size: 1.1rem;
+  padding: 1rem;
 }
 
 button {
@@ -54,6 +76,3 @@ button:hover {
   font-weight: bold;
 }
 
-#subject {
-  padding: 4rem;
-}

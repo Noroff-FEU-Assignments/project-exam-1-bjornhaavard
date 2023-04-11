@@ -1,4 +1,5 @@
 import { getPosts } from "../../api/posts.js";
+import { setModalImage } from "./displayPostDetail.js"
 
 export default async function displayPostList() {
   const posts = await getPosts();
@@ -33,7 +34,7 @@ export function renderPosts(posts, selector) {
 }
 
 
-function createPost(post) {
+export function createPost(post) {
   const { id, title, content } = post;
   const div = document.createElement("a");
   const heading = document.createElement("h2");
@@ -48,7 +49,9 @@ function createPost(post) {
   return div;
 }
 
-function getImageFromContent(html) {
+export function getImageFromContent(html) {
+  
+setModalImage()
   const parser = new DOMParser();
   const parsedDocument = parser.parseFromString(html, "text/html");
   const img = parsedDocument.querySelector("img");

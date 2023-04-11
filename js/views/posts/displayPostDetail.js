@@ -1,4 +1,6 @@
 import { getPostDetails } from "../../api/posts.js";
+// import { getImageFromContent } from "./displayPostList.js";
+import { createPost } from "./displayPostList.js";
 
 // render HTML
 
@@ -8,7 +10,7 @@ export default async function displayPostDetail(container = "#postDetailContaine
   const postId = getIdFromQueryString();
 
   const post = await getPostDetails(postId);
-  console.log(postId);
+  
   
     // const blogPost = createPost(post);
     // parentElement.innerHTML(blogPost);
@@ -21,8 +23,10 @@ export default async function displayPostDetail(container = "#postDetailContaine
                                        </div>
 
                                    </div>`;
-  
+                                   
+  console.log(content.rendered)
 }
+
 
 function getIdFromQueryString() {
   const url = new URL(window.location);
@@ -30,11 +34,10 @@ function getIdFromQueryString() {
   return searchParams.get("id");
 }
 
-// function handlePostButtons() {
-//   const buttons = document.querySelectorAll("#readPost");
+export function setModalImage( ) {
+  const img = document.querySelector("img.src");
+  // getImageFromContent()
 
-//   buttons.forEach(function (button) {
-//     button.addEventListener("click", displayPostDetail);
-//     console.log(button);
-//   });
-// }
+  console.log(img)
+  return;
+  }
