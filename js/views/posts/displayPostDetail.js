@@ -24,9 +24,21 @@ export default async function displayPostDetail(container = "#postDetailContaine
 
                                    </div>`;
                                    
-  console.log(content.rendered)
-}
+  
+  function  setModalImage() {
+    const modal = document.querySelector(".modal")
+    const img = parentElement.querySelector("img")
+    const modalImg = document.querySelector("#img")
+    img.addEventListener("click", () => {
+      modal.style.display ="block";
+      modalImg.src = `<div>${img}</div>`
+      console.log(modalImg)
+    });
 
+    return;
+    }
+  setModalImage()
+}
 
 function getIdFromQueryString() {
   const url = new URL(window.location);
@@ -34,10 +46,3 @@ function getIdFromQueryString() {
   return searchParams.get("id");
 }
 
-export function setModalImage( ) {
-  const img = document.querySelector("img.src");
-  // getImageFromContent()
-
-  console.log(img)
-  return;
-  }
