@@ -26,13 +26,14 @@ export default async function displayPostDetail(container = "#postDetailContaine
                                    
   
   function  setModalImage() {
-    const modal = document.querySelector(".modal")
+    const modal = document.querySelector("#modal-container")
     const img = parentElement.querySelector("img")
     const modalImg = document.querySelector("#img")
+    
     img.addEventListener("click", () => {
-      modal.style.display ="block";
-      modalImg.src = `<div>${img}</div>`
-      console.log(modalImg)
+      modal.style.display = "block";
+      modalImg = img;
+      console.log(modalImg);
     });
 
     return;
