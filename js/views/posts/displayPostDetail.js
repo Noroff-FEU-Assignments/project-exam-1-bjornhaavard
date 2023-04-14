@@ -28,16 +28,22 @@ export default async function displayPostDetail(container = "#postDetailContaine
   function  setModalImage() {
     const modal = document.querySelector("#modal-container")
     const img = parentElement.querySelector("img")
-    let modalImg = document.querySelector("#img")
+    const span = document.querySelector(".close")
+    let modalImg = document.querySelector(".modal-content")
     
     img.addEventListener("click", () => {
       modal.style.display = "block";
-      modalImg = `${img}`;
-      console.log(modalImg);
+      modalImg.src = img.src;
+      console.log(img);
     });
-
-    return;
+    window.onclick = function(event) {
+      if(event.target == modal) {
+        modal.style.display = "none";
+      };
+      modal.appendChild(modalImg)
     }
+    return;
+  }
   setModalImage()
 }
 

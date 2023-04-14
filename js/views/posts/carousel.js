@@ -20,7 +20,7 @@ export async function populateCarousel () {
     prevButton.addEventListener("click", () => {
         carouselWrapper.scrollBy({
             left: -carouselWrapper.offsetWidth,
-            behavior: "smooth"
+            // behavior: "smooth"
         });
         
     });
@@ -28,7 +28,7 @@ export async function populateCarousel () {
     nextButton.addEventListener("click", () => {
         carouselWrapper.scrollBy({
             left: carouselWrapper.offsetWidth,
-            behavior: "smooth"
+            // behavior: "smooth"
         });
      
     });

@@ -17,12 +17,12 @@
 
 .carousel-wrapper {
     display: flex;
-    overflow-x: scroll;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    max-width:1400px;
-    gap: 2rem;
+    max-width:1200px;
+    gap: 3rem;
     padding: 2rem;
 }
 
@@ -44,6 +44,10 @@
     padding: 1rem;
 }
 
+.post-card h2 {
+    padding: 2rem;
+}
+
 .carousel-prev {
     left: 0;
 }
@@ -52,10 +56,11 @@
     right: 0;
 }
 
- @media (max-width: 500px) {
+ @media (max-width: 530px) {
     .carousel-wrapper {
         overflow-x: hidden;
-        display: flow-root;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
