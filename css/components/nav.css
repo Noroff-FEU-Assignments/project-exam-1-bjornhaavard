@@ -9,6 +9,7 @@ nav a {
   display: flex;
   width: 25px;
   height: 3px;
+  
   margin: 5px auto;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
@@ -19,6 +20,7 @@ nav a {
   .hamburger {
     display: block;
     cursor: pointer;
+  
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -34,7 +36,7 @@ nav a {
   .nav-menu {
     position: fixed;
     right: -100%;
-    top: 0px;
+    top: 80px;
     font-size: 1.5rem;
     z-index: 50;
     gap: 0;
