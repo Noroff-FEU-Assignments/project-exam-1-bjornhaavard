@@ -35,6 +35,7 @@ nav a {
     position: fixed;
     right: -100%;
     top: 0px;
+    font-size: 1.5rem;
     z-index: 50;
     gap: 0;
     flex-direction: column;
