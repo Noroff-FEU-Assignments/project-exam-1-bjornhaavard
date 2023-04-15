@@ -2,11 +2,15 @@ import { getPosts } from "../../api/posts.js";
 
 
 export default async function displayPostList() {
+  let loader = document.querySelector(".lds-ripple")
   const posts = await getPosts();
   const container = document.querySelector("#postContainer");
   const morePosts = 10;
   const firstPosts = posts.slice(0, 10);
   renderPosts(firstPosts, "#postContainer");
+  if(posts) {
+    loader.style.display = "none"
+  }
   if (posts.length > morePosts) {
     const readMoreButton = document.createElement("button");
     readMoreButton.classList.add("read-more");

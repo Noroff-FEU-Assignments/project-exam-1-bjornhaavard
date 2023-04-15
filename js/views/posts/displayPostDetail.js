@@ -8,10 +8,12 @@ export default async function displayPostDetail(container = "#postDetailContaine
   const parentElement = document.querySelector(container);
 
   const postId = getIdFromQueryString();
-
+  let loader = document.querySelector(".lds-ripple")
   const post = await getPostDetails(postId);
   
-  
+  if (post) {
+    loader.style.display = "none"
+  }
     // const blogPost = createPost(post);
     // parentElement.innerHTML(blogPost);
     const { title, content } = post;
