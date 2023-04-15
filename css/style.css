@@ -1,3 +1,5 @@
+
+@import url(components/variables.css);
 @import url(components/nav.css);
 @import url(components/footer.css);
 @import url(components/contact.css);
@@ -15,6 +17,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 
 
 body {
@@ -99,7 +102,7 @@ h1 {
   font-size: 1.2rem;
   display: flex;
   align-items: center;
-  padding: 2rem;
+  padding: var(--standard-padding);
 }
 
 .welcome-image {
