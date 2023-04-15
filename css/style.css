@@ -1,5 +1,5 @@
 
-@import url(components/variables.css);
+@import url(/css/components/variables.css);
 @import url(components/loader.css);
 @import url(components/nav.css);
 @import url(components/footer.css);

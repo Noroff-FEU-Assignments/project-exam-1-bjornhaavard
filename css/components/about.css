@@ -1,4 +1,4 @@
-@import url(components/variables.css);
+@import url(/css/components/variables.css);
 
 .about {
     display: flex;

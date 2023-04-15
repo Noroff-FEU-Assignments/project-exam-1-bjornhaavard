@@ -17,6 +17,7 @@
     max-width: 60%;
     max-height: auto;
     margin: 0 auto;
+    position: relative;
   }
 
   .close {

@@ -1,3 +1,6 @@
+import { hamburgerMenu } from "./constants/hamburger.js";
+
+
 const form = document.querySelector("#contactForm");
 const fullName = document.querySelector("#fullName");
 const fullNameError = document.querySelector("#fullNameError");
@@ -9,7 +12,8 @@ const messageSent = document.querySelector("#messageSent");
 const textArea = document.querySelector("#textArea")
 const textError = document.querySelector("#textError")
 
-function validateInput(event) {
+export function validateInput(event) {
+
   event.preventDefault();
 
   if (checkValue(fullName.value, 5)) {
@@ -62,3 +66,5 @@ function validateEmail(email) {
   const patternMatches = regEx.test(email);
   return patternMatches;
 }
+
+hamburgerMenu()
