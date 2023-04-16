@@ -31,12 +31,12 @@ body {
   font-size: 1.3rem;
   font-weight: 600;
   color: rgb(255, 255, 255);
-  background-color: #222;
+  background-color: #465c3f;
   text-align: center;
   margin-bottom: 1em;
   padding: 2rem;
   margin: 1rem 0 1rem;
-  
+  max-width: 320px;
 }
 
 form {
