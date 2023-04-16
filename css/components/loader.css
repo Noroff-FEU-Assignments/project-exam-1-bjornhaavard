@@ -5,7 +5,9 @@
   height: 80px;
   margin-left: 30px;
   top: 50%;
-  left: 50%;
+  left: calc(50% - 50px);
+  
+
 }
 .lds-ripple div {
   position: absolute;
