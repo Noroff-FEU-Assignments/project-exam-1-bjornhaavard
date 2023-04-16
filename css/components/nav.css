@@ -34,7 +34,7 @@ nav a {
   }
 
   .nav-menu {
-    position: fixed;
+    position: absolute;
     right: -100%;
     top: 80px;
     font-size: 1.5rem;
