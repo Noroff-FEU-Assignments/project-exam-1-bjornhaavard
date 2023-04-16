@@ -3,4 +3,35 @@
   background-color: #433b3b;
   padding: 6rem;
   margin-top: 40rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer img {
+  max-width: 40%;
+}
+
+.nav-media {
+  display: flex;
+  gap: 2rem;
+  margin: auto;
+}
+
+.footer:nth-child(2) {
+  align-self: center ;
+  text-align: center;
+}
+
+
+@media (max-width: 750px) {
+  .footer {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+  }
+
+  .nav-media {
+    flex-direction: column;
+  }
 }
