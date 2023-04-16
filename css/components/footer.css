@@ -2,7 +2,7 @@
   text-align: center;
   background-color: #433b3b;
   padding: 4rem;
-  margin-top: 40rem;
+  margin-top: var(--standard-padding);
   display: grid;
   align-items: center;
   font-size: 1.2rem;
