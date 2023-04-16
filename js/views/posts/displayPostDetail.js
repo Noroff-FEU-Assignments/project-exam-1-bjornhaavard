@@ -10,6 +10,7 @@ export default async function displayPostDetail(container = "#postDetailContaine
   const postId = getIdFromQueryString();
   let loader = document.querySelector(".lds-ripple")
   const post = await getPostDetails(postId);
+  const titleTag = document.querySelector("#title-tag")
   
   if (post) {
     loader.style.display = "none"
@@ -19,14 +20,12 @@ export default async function displayPostDetail(container = "#postDetailContaine
     const { title, content } = post;
     parentElement.innerHTML += `<div >
                                        <div class="post-details">
-
                                         <h2>${title.rendered}</h2>
                                         <div>${content.rendered}</div>
                                        </div>
-
                                    </div>`;
                                    
-  
+                                   titleTag.innerText = "PewPewLife | " + title.rendered
   function  setModalImage() {
     const modal = document.querySelector("#modal-container")
     const img = parentElement.querySelector("img")

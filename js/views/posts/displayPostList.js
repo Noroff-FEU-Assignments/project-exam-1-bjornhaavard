@@ -1,7 +1,20 @@
 import { getPosts } from "../../api/posts.js";
 
 
+
+
 export default async function displayPostList() {
+
+  const searchButton = document.querySelector(".search-button")
+  searchButton.addEventListener("click", () =>  {
+    const searchInput = document.querySelector("#search-input").value;
+    const newBlogPost = blogPost + `?search=${searchInput}`
+    container.appendChild(newBlogPost)
+    console.log(searchInput)
+  });
+
+ 
+  
   let loader = document.querySelector(".lds-ripple")
   const posts = await getPosts();
   const container = document.querySelector("#postContainer");
@@ -20,12 +33,13 @@ export default async function displayPostList() {
       const restOfThePosts = posts.slice(-2);
       restOfThePosts.forEach((post) => {
         const blogPost = createPost(post);
-        container.appendChild(blogPost);
+        container.appendChild(newBlogPost);
       });
       readMoreButton.style.display = "none";
     });
     container.appendChild(readMoreButton);
   }
+  
 }
 
 export function renderPosts(posts, selector) {
@@ -34,7 +48,9 @@ export function renderPosts(posts, selector) {
     const blogPost = createPost(post);
     container.appendChild(blogPost);
   });
-
+ 
+  
+ 
 }
 
 
