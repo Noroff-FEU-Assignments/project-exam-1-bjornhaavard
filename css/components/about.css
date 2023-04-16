@@ -24,6 +24,9 @@
   margin: 1rem 0 1rem;
   text-align: justify;
 }
+.about h2 {
+    margin-bottom: var(--standard-padding);
+}
 
 #video {
     width: 100%;

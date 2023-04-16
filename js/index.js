@@ -21,7 +21,7 @@ async function router() {
       return;
 
     case "/index.html":
-      populateCarousel()
+      populateCarousel();
         
       return;
    
