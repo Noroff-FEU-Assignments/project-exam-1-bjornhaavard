@@ -2,7 +2,7 @@ import { hamburgerMenu } from "../js/constants/hamburger.js";
 import displayPostList from "../js/views/posts/displayPostList.js";
 import displayPostDetail from "./views/posts/displayPostDetail.js";
 import { populateCarousel } from "./views/posts/carousel.js"
-import { validateInput } from "./contact.js"
+
 
 hamburgerMenu();
 
