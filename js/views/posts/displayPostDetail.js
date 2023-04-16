@@ -1,5 +1,5 @@
 import { getPostDetails } from "../../api/posts.js";
-// import { getImageFromContent } from "./displayPostList.js";
+import { getImageFromContent } from "./displayPostList.js";
 import { createPost } from "./displayPostList.js";
 
 // render HTML
@@ -30,7 +30,6 @@ export default async function displayPostDetail(container = "#postDetailContaine
   function  setModalImage() {
     const modal = document.querySelector("#modal-container")
     const img = parentElement.querySelector("img")
-    const span = document.querySelector(".close")
     let modalImg = document.querySelector(".modal-content")
     
     img.addEventListener("click", () => {

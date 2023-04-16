@@ -31,8 +31,9 @@
    
   }
 
- @media ( max: 400px) {
-    .modal-content {
+ @media (max-width: 550px) {
+    #modalImg {
+        display: block;
         max-width: 100%;
     }
  }
