@@ -5,11 +5,12 @@ nav a {
   color: white;
 }
 
+
+
 .bar {
   display: flex;
   width: 25px;
   height: 3px;
-  
   margin: 5px auto;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
@@ -20,7 +21,6 @@ nav a {
   .hamburger {
     display: block;
     cursor: pointer;
-  
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -48,8 +48,9 @@ nav a {
     transition: 0.3s;
   }
 
-  .nav-item {
+  .nav-item  {
     margin: 56px 0;
+    
   }
 
   .nav-menu.active {

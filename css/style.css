@@ -35,6 +35,11 @@ a {
   transition: all 600ms ease;
 }
 
+a:hover {
+  transform: scale(1.1);
+  transition: all 600ms ease;
+}
+
 img {
   width: 100%;
 }
