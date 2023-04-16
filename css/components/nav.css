@@ -19,7 +19,7 @@ nav a {
 
 @media (max-width: 765px) {
   .hamburger {
-    display: none;
+    display: block;
     cursor: pointer;
   }
 
@@ -34,7 +34,7 @@ nav a {
   }
 
   .nav-menu {
-    position: absolute;
+    position: fixed;
     right: -100%;
     top: 80px;
     font-size: 1.5rem;
