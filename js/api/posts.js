@@ -4,7 +4,6 @@ export async function getPosts(categoryId) {
   const url = `${postListUrl}${categoryId}&per_page=20`;
   const response = await fetch(url);
   const posts = await response.json();
-  console.log(posts);
   return posts;
 }
 

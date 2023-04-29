@@ -1,17 +1,30 @@
 body {
   overflow-x: hidden;
+  width: 100%;
 }
 
 #contactForm {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(37, 36, 36);
   color: rgb(255, 255, 255);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  display: flex;
+  gap: 2rem;
 }
 
 .contact-container {
   display: flex;
   justify-content: center;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.flex-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-2 {
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-section h2 {
@@ -41,13 +54,13 @@ body {
 
 form {
   margin-top: 2rem;
-  padding: 5rem;
+  padding: 3rem;
   border-radius: 1em;
 }
 
 input {
   display: flex;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
@@ -60,8 +73,8 @@ textarea {
 button {
   padding: 0.8rem 5rem;
   border-radius: 1em;
-  margin-top: 2rem;
   text-align: center;
+  margin-top: 1rem;
   border: 4px solid #201f1f;
 }
 
@@ -73,16 +86,21 @@ button:hover {
   font-weight: bold;
 }
 
-@media (max-width: 500px) {
-  .contact-section h2{
+@media (max-width: 845px) {
+  .contact-section h2 {
     text-align: center;
+  }
+
+  #contactForm {
+    /* display: flex; */
+    flex-direction: column;
   }
 
   form {
     padding: 2rem;
   }
 
-  input {
-    padding: 1rem 1rem;
+  button {
+    margin-top: 2rem;
   }
 }

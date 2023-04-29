@@ -40,10 +40,13 @@ img {
   width: 100%;
 }
 
-h1,
-h2 {
+h1 {
   font-family: monospace;
   font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 .nav-selected {

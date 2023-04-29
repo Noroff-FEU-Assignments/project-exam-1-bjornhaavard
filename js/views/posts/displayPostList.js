@@ -1,8 +1,10 @@
 import { getPosts } from "../../api/posts.js";
 
+let posts = [];
+
 export default async function displayPostList() {
   let loader = document.querySelector(".lds-ripple");
-  const posts = await getPosts();
+  posts = await getPosts();
   const container = document.querySelector("#postContainer");
   const morePosts = 10;
   const firstPosts = posts.slice(0, 10);
@@ -30,6 +32,7 @@ export default async function displayPostList() {
 
 export function renderPosts(posts, selector) {
   const container = document.querySelector(selector);
+  container.innerHTML = "";
   posts.forEach((post) => {
     const blogPost = createPost(post);
     container.appendChild(blogPost);
@@ -59,19 +62,14 @@ export function getImageFromContent(html) {
   return img.src;
 }
 
-// const searchButton = document.querySelector(".search-button")
-// searchButton.addEventListener("click", (container = document.querySelector(".")) =>  {
-//   const searchInput = document.querySelector("#search-input").value;
-//   const newBlogPost = `?search=${searchInput}`
-//   container = ""
-//   container.appendChild()
-//   displayPostList(newBlogPost)
-//   console.log(searchInput)
-// });
+const categoryButtons = document.querySelectorAll(".cat-button");
 
-// function searchPosts (posts) {
-//   getPosts()
-//   console.log(posts)
-// }
+categoryButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const categoryId = button.dataset.id;
+    const filteredPosts = posts.filter((post) => post.id === categoryId);
 
-// searchPosts()
+    renderPosts(filteredPosts, "#postContainer");
+    console.log(filteredPosts);
+  });
+});
