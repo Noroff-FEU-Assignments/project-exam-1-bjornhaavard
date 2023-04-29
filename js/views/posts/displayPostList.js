@@ -66,20 +66,44 @@ export function getImageFromContent(html) {
 }
 
 
-// const searchButton = document.querySelector(".search-button")
-// searchButton.addEventListener("click", (container = document.querySelector(".")) =>  {
-//   const searchInput = document.querySelector("#search-input").value;
-//   const newBlogPost = `?search=${searchInput}`
-//   container = ""
-//   container.appendChild(newBlogPost)
-//   displayPostList(newBlogPost)
-//   console.log(searchInput)
+const huntButton = document.querySelector("#hunt")
+const trainButton = document.querySelector("#train")
+const matchButton = document.querySelector("#match")
+
+// const handleClick = (event) => {
+//   const button = event.target.dataset.id
+
+
+// };
+// filterButtons.forEach(button => {
+//   button.addEventListener("click", handleClick)
+// });
+
+// buttons.forEach.addEventListener("click", (event)  => {
+//     const { id } = event.target.dataset
+
+//     newPosts = { id }
+
+//   console.log("test")
+// });
+
+// huntButton.addEventListener("click", (event)  => {
+//   renderPosts()
+//   const id = event.target.dataset.id
+//   const newBlogPost = blogPost
+//   const url = `newBlogPost${newBlogPost}`;
+//   blogPost.appendChild(url)
+//   console.log(id)
+// });
+
+// trainButton.addEventListener("click", ()  => {
+  
+//   console.log("train button")
+// });
+
+// matchButton.addEventListener("click", ()  => {
+  
+//   console.log("match button")
 // });
 
 
-// function searchPosts (posts) {
-//   getPosts()
-//   console.log(posts)
-// }
-
-// searchPosts()
