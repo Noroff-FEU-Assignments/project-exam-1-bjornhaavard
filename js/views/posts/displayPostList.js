@@ -66,12 +66,15 @@ export function getImageFromContent(html) {
 const categoryButtons = document.querySelectorAll(".cat-button");
 
 categoryButtons.forEach((button) => {
-  button.addEventListener("click", () => {
+  button.addEventListener("click", async () => {
     const categoryId = button.dataset.id;
     // const filteredPosts = posts.filter((post) => post.category === categoryId);
-    const url = postListUrl;
-    console.log(url);
-    const filterPost = `${url} + ${categoryId}`((post) => post.category === categoryId);
-    renderPosts(filterPost, "#postContainer");
+    // const url = postListUrl;
+    // console.log(url);
+    // const filterPost = url + categoryId((post) => post.category === categoryId);
+    // renderPosts(filterPost, "#postContainer");
+    // const categoryId = button.dataset.id;
+    const posts = await getPosts(categoryId);
+    renderPosts(posts, "#postContainer");
   });
 });
