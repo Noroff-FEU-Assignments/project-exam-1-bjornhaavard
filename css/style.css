@@ -47,6 +47,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  margin-bottom: var(--standard-padding);
 }
 
 .nav-selected {

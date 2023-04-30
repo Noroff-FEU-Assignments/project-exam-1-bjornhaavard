@@ -1,4 +1,5 @@
 import { getPosts } from "../../api/posts.js";
+import { postListUrl } from "../../api/constants.js";
 
 let posts = [];
 
@@ -67,9 +68,10 @@ const categoryButtons = document.querySelectorAll(".cat-button");
 categoryButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const categoryId = button.dataset.id;
-    const filteredPosts = posts.filter((post) => post.id === categoryId);
-
-    renderPosts(filteredPosts, "#postContainer");
-    console.log(filteredPosts);
+    // const filteredPosts = posts.filter((post) => post.category === categoryId);
+    const url = postListUrl;
+    console.log(url);
+    const filterPost = `${url} + ${categoryId}`((post) => post.category === categoryId);
+    renderPosts(filterPost, "#postContainer");
   });
 });
