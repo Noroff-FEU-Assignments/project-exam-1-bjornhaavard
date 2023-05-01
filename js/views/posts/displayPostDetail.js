@@ -24,29 +24,7 @@ export default async function displayPostDetail(container = "#postDetailContaine
                                         <div>${content.rendered}</div>
                                        </div>
                                    </div>
-                                   <form id="contactForm" method="get">
-          <div>
-            <label>
-              Full name (min. 6 characters)
-              <input fullName="full name" id="fullName" />
-            </label>
-            <div class="form-error" id="fullNameError">Please enter your full name (minimum 6 characters)</div>
-          </div>
-          <div>
-            <label>
-              Email
-              <input name="email" id="email" />
-            </label>
-            <div class="form-error" id="emailError">Please enter a valid email address</div>
-          </div>
-          <div>Your message (min. 25 characters)</div>
-          <div>
-            <textarea aria-label="text area" name="text" id="textArea" cols="24" rows="10"></textarea>
-            <div class="form-error" id="textError">message must be over 25 characters</div>
-          </div>
-          <div class="messageContainer" id="messageSent"></div>
-          <button id="submit">Submit</button>
-        </form>`;
+               `;
 
   titleTag.innerText = "PewPewLife | " + title.rendered;
   function setModalImage() {

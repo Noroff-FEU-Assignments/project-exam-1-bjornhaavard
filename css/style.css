@@ -101,6 +101,11 @@ h2 {
   border-radius: 0%;
   /* margin: 1rem auto; */
 }
+
+/* .cat-button:active {
+  border: solid 2px white;
+} */
+
 .button-container {
   display: flex;
   gap: 1rem;
