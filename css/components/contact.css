@@ -86,6 +86,14 @@ button:hover {
   font-weight: bold;
 }
 
+.active-button {
+  background-color: rgb(12, 2, 2);
+  cursor: pointer;
+  border: 3px solid rgb(214, 210, 205);
+  color: rgb(214, 210, 205);
+  font-weight: bold;
+}
+
 @media (max-width: 845px) {
   .contact-section h2 {
     text-align: center;
