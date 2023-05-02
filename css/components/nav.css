@@ -5,6 +5,10 @@ nav a {
   color: white;
 }
 
+.nav-menu {
+  background-color: var(--background-color);
+  padding: 0.3rem;
+}
 
 
 .bar {
@@ -17,7 +21,7 @@ nav a {
   background-color: white;
 }  
 
-@media (max-width: 765px) {
+@media (max-width: 790px) {
   .hamburger {
     display: block;
     cursor: pointer;
@@ -59,7 +63,7 @@ nav a {
   }
 }
 
-@media (min-width: 766px) {
+@media (min-width: 791px) {
   nav {
     display: flex;
     gap: 3rem;

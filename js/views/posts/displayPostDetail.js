@@ -11,6 +11,8 @@ export default async function displayPostDetail(container = "#postDetailContaine
   let loader = document.querySelector(".lds-ripple");
   const post = await getPostDetails(postId);
   const titleTag = document.querySelector("#title-tag");
+  const metaDescription = document.querySelector(`meta[name="description"]`);
+  
 
   if (post) {
     loader.style.display = "none";
@@ -27,6 +29,13 @@ export default async function displayPostDetail(container = "#postDetailContaine
                `;
 
   titleTag.innerText = "PewPewLife | " + title.rendered;
+
+  // Get the title of the blog post and change the content of the meta tag with the title of the post
+  
+  if  (metaDescription) {
+    metaDescription.setAttribute("content", "Blog post: " + title.rendered)
+  }
+
   function setModalImage() {
     const modal = document.querySelector("#modal-container");
     const img = parentElement.querySelector("img");

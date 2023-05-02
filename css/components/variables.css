@@ -1,3 +1,5 @@
 :root {
-    --standard-padding: 2rem
+    --standard-padding: 2rem;
+    --background-color: rgb(22,22,24);
+    --box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   }

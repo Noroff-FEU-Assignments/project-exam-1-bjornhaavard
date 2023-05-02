@@ -123,8 +123,9 @@ h2 {
 }
 
 .welcome-text {
-  background-color: rgb(22, 22, 24);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  background-color: var(--background-color);
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); */
+  box-shadow: var(--box-shadow);
   font-size: 1.2rem;
   display: flex;
   align-items: center;
@@ -136,7 +137,7 @@ h2 {
   object-fit: contain;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 790px) {
   .before-nav-index,
   .before-nav-about,
   .before-nav-contact,
