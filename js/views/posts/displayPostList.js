@@ -47,12 +47,14 @@ export function createPost(post) {
   const heading = document.createElement("h3");
   const img = getImageFromContent(content.rendered);
   const imageContainer = document.createElement("div");
+  const paragraph = document.createElement("p");
   div.classList.add("post-card");
-  heading.innerText = title.rendered;
+  paragraph.innerText = heading.innerText = title.rendered;
   imageContainer.classList.add("image-container");
   imageContainer.style.backgroundImage = `url(${img})`;
   div.setAttribute("href", `/blog-specific.html?id=${id}`);
   div.append(heading, imageContainer);
+  console.log(post);
   return div;
 }
 
@@ -67,13 +69,15 @@ const categoryButtons = document.querySelectorAll(".cat-button");
 
 categoryButtons.forEach((button) => {
   button.addEventListener("click", async () => {
+    // button.classList.remove("cat-button");
+    button.classList.toggle("active-button");
+    if (button === true) {
+      button.classList.remove("active-button");
+    }
+    // button.classList.toggle("active-button");
+
+    console.log(button);
     const categoryId = button.dataset.id;
-    // const filteredPosts = posts.filter((post) => post.category === categoryId);
-    // const url = postListUrl;
-    // console.log(url);
-    // const filterPost = url + categoryId((post) => post.category === categoryId);
-    // renderPosts(filterPost, "#postContainer");
-    // const categoryId = button.dataset.id;
     const posts = await getPosts(categoryId);
     renderPosts(posts, "#postContainer");
   });
