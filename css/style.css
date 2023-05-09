@@ -119,8 +119,9 @@ h2 {
   text-align: left;
   font-size: 1.3rem;
   padding: 4rem 2rem 2rem 2rem;
-
-  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  /* justify-content: center; */
 }
 
 .welcome-text {
