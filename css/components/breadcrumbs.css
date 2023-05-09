@@ -1,0 +1,28 @@
+.breadcrumbs {
+  padding: 0;
+  margin: 1rem;
+}
+
+.breadcrumbs-item {
+  display: inline-block;
+  /* margin: 1rem; */
+}
+
+.breadcrumbs-item:not(:last-of-type)::after {
+  content: "-->";
+  margin: 0px 5px;
+  color: rgb(117, 117, 117);
+}
+
+.breadcrumbs-link {
+  color: rgb(117, 117, 117);
+}
+
+.breadcrumbs-link:hover {
+  color: antiquewhite;
+}
+
+.breadcrumbs-link-active {
+  color: antiquewhite;
+  pointer-events: none;
+}

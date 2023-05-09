@@ -12,7 +12,6 @@ export default async function displayPostDetail(container = "#postDetailContaine
   const post = await getPostDetails(postId);
   const titleTag = document.querySelector("#title-tag");
   const metaDescription = document.querySelector(`meta[name="description"]`);
-  
 
   if (post) {
     loader.style.display = "none";
@@ -20,7 +19,19 @@ export default async function displayPostDetail(container = "#postDetailContaine
   // const blogPost = createPost(post);
   // parentElement.innerHTML(blogPost);
   const { title, content } = post;
-  parentElement.innerHTML += `<div >
+  parentElement.innerHTML += `     <div><ul class="breadcrumbs">
+  <li class="breadcrumbs-item">
+    <a href="index.html" class="breadcrumbs-link">Home</a>
+  </li>
+  <li class="breadcrumbs-item">
+    <a href="blog.html" class="breadcrumbs-link">Archive</a>
+  </li>
+  <li class="breadcrumbs-item">
+    <a href="blog-specific.html" class="breadcrumbs-link breadcrumbs-link-active">${title.rendered}</a>
+  </li>
+</ul>
+</div>
+                                     <div>
                                        <div class="post-details">
                                         <h2>${title.rendered}</h2>
                                         <div>${content.rendered}</div>
@@ -31,9 +42,9 @@ export default async function displayPostDetail(container = "#postDetailContaine
   titleTag.innerText = "PewPewLife | " + title.rendered;
 
   // Get the title of the blog post and change the content of the meta tag with the title of the post
-  
-  if  (metaDescription) {
-    metaDescription.setAttribute("content", "Blog post: " + title.rendered)
+
+  if (metaDescription) {
+    metaDescription.setAttribute("content", "Blog post: " + title.rendered);
   }
 
   function setModalImage() {
