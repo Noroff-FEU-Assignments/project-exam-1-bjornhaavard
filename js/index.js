@@ -1,7 +1,8 @@
 import { hamburgerMenu } from "../js/constants/hamburger.js";
 import displayPostList from "../js/views/posts/displayPostList.js";
 import displayPostDetail from "./views/posts/displayPostDetail.js";
-import { populateCarousel } from "./views/posts/carousel.js"
+import { populateCarousel } from "./views/posts/carousel.js";
+import { setButton } from "./api/constants.js";
 
 
 hamburgerMenu();
@@ -22,6 +23,7 @@ async function router() {
 
     case "/index.html":
       populateCarousel();
+      setButton()
         
       return;
    
@@ -29,3 +31,4 @@ async function router() {
 }
 
 router();
+
