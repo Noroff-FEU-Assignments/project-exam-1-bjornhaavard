@@ -1,6 +1,7 @@
 import { getPosts } from "../../api/posts.js";
-import { postListUrl } from "../../api/constants.js";
+import { displayErrorMessage } from "../../component/displayError.js";
 
+const errorMessage = document.querySelector("#error");
 let posts = [];
 
 export default async function displayPostList() {
@@ -32,13 +33,17 @@ export default async function displayPostList() {
 }
 
 export function renderPosts(posts, selector) {
-  const container = document.querySelector(selector);
-  container.innerHTML = "";
-  posts.forEach((post) => {
-    const blogPost = createPost(post);
-    container.appendChild(blogPost);
-    console.log(posts);
-  });
+  try {
+    const container = document.querySelector(selector);
+    container.innerHTML = "";
+    posts.forEach((post) => {
+      const blogPost = createPost(post);
+      container.appendChild(blogPost);
+      console.log(posts);
+    });
+  } catch (error) {
+    errorMessage.innerHTML = displayErrorMessage("there was an error");
+  }
 }
 
 export function createPost(post) {

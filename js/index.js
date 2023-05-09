@@ -3,9 +3,10 @@ import displayPostList from "../js/views/posts/displayPostList.js";
 import displayPostDetail from "./views/posts/displayPostDetail.js";
 import { populateCarousel } from "./views/posts/carousel.js";
 import { setButton } from "./api/constants.js";
-
+import { displayErrorMessage } from "./component/displayError.js";
 
 hamburgerMenu();
+displayErrorMessage();
 
 async function router() {
   const pathname = window.location.pathname;
@@ -18,17 +19,15 @@ async function router() {
 
     case "/blog-specific.html":
       displayPostDetail();
-      
+
       return;
 
     case "/index.html":
       populateCarousel();
-      setButton()
-        
+      setButton();
+
       return;
-   
   }
 }
 
 router();
-

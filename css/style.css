@@ -26,6 +26,11 @@ body {
   font-weight: 600;
 }
 
+#error {
+  text-align: center;
+  /* font-size: 3rem; */
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -139,10 +144,8 @@ h2 {
 }
 
 .index-about {
-  max-width: 1000px;
   display: flex;
-  text-align: center;
-  margin: auto;
+  justify-content: center;
   position: relative;
 }
 
@@ -151,15 +154,15 @@ h2 {
 }
 
 .index-about img {
-  max-width: 500vw;
-  filter: grayscale(0.7) contrast(3);
+  width: 80vw;
+  filter: grayscale(0.9) contrast(2);
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
 
 .index-about button {
   position: absolute;
   top: 50%;
-  left: calc(50% - 50px);
+  left: calc(50% - 100px);
 }
 
 @media (max-width: 790px) {

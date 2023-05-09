@@ -1,20 +1,26 @@
+import { displayErrorMessage } from "../component/displayError.js";
 import { apiUrl, postListUrl } from "./constants.js";
+
+const errorMessage = document.querySelector("#error");
 
 export async function getPosts(categoryId) {
   // const url = `${postListUrl}${categoryId}&per_page=20`;
   // const response = await fetch(url);
   // const posts = await response.json();
-
   // console.log(url);
   // return posts;
-  let url = apiUrl + "?";
-  if (categoryId) {
-    url = `${postListUrl}${categoryId}`;
+  try {
+    let url = apiUrl + "?";
+    if (categoryId) {
+      url = `${postListUrl}${categoryId}`;
+    }
+    url += "&per_page=20";
+    const response = await fetch(url);
+    const posts = await response.json();
+    return posts;
+  } catch (error) {
+    errorMessage.innerHTML = displayErrorMessage("There was an error");
   }
-  url += "&per_page=20";
-  const response = await fetch(url);
-  const posts = await response.json();
-  return posts;
 }
 
 export async function getPostDetails(postId) {
@@ -25,7 +31,7 @@ export async function getPostDetails(postId) {
     return postDetails;
   } catch (error) {
     console.log(error);
-    // displayError(error);
+    errorMessage.innerHTML = "There was an error";
   }
 }
 
