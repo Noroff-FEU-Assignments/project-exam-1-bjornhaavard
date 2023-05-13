@@ -103,9 +103,15 @@ button:hover {
     text-align: center;
   }
 
+  textarea,
+  input {
+    padding: 0.3rem;
+    margin: auto;
+  }
+
   #contactForm {
-    /* display: flex; */
     flex-direction: column;
+    gap: 0;
   }
 
   form {
