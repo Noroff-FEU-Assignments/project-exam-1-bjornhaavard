@@ -31,6 +31,10 @@ body {
   /* font-size: 3rem; */
 }
 
+.main {
+  margin-top: 3rem;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -47,13 +51,17 @@ img {
 }
 
 h1 {
-  font-family: monospace;
   font-size: 3rem;
 }
 
 h2 {
   font-size: 2rem;
   margin-bottom: var(--standard-padding);
+}
+
+#logo {
+  font-size: 3rem;
+  font-family: monospace;
 }
 
 .nav-selected {
@@ -174,6 +182,7 @@ h2 {
     display: flex;
   }
 
+  #logo,
   h1 {
     font-size: 1.9rem;
   }

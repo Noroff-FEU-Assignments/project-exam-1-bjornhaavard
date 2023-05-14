@@ -36,7 +36,7 @@ export default async function displayPostDetail(container = "#postDetailContaine
        </div>
                                      <div>
                                        <div class="post-details">
-                                        <h2>${title.rendered}</h2>
+                                        <h1>${title.rendered}</h1>
                                         <div>${content.rendered}</div>
                                        </div>
                                    </div>
