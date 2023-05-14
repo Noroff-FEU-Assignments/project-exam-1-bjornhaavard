@@ -40,6 +40,7 @@ export default async function displayPostDetail(container = "#postDetailContaine
                                         <div>${content.rendered}</div>
                                        </div>
                                    </div>
+
                `;
 
   titleTag.innerText = "PewPewLife | " + title.rendered;
