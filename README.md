@@ -51,4 +51,4 @@ You will need to add at least 12 blogs for your website. You can use lorem ipsum
 
 ### Installing
 
-Clone the repo: ``` ```
+Clone the repo: ``` https://github.com/Noroff-FEU-Assignments/project-exam-1-bjornhaavard ```
