@@ -14,6 +14,12 @@ I was tasked with creating a blog site. I could choose the design and topics cov
 -	Blog post specific pages
 -	Contact page.
 
+## Built With:
+
+- HTML
+- CSS
+- JavaScript
+
 ### Home Page
 The home page should have a ‘Latest Posts’ section which uses a carousel (slider) for users to click to view more posts. For example, by default the user can see four posts, then they can click an arrow on the right to view the next four posts, and click it again to view the next four posts. The user can also click back to view results they had previously seen. This must be implemented for desktop at least, but if you want a simpler layout for mobile, you can change it from being in a carousel.
 
