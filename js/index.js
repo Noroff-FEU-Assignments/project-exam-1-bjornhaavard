@@ -12,8 +12,8 @@ async function router() {
   const pathname = window.location.pathname;
 
   switch (pathname) {
-    case "./blog.html":
-    case "./":
+    case "/blog.html":
+    case "/":
       displayPostList();
 
       return;
