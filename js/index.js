@@ -13,6 +13,7 @@ async function router() {
 
   switch (pathname) {
     case "/blog.html":
+    case "/":
       displayPostList();
 
       return;
