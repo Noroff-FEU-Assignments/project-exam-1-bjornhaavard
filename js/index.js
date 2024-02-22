@@ -13,7 +13,6 @@ async function router() {
 
   switch (pathname) {
     case "/blog.html":
-    case "/":
       displayPostList();
 
       return;
@@ -24,6 +23,7 @@ async function router() {
       return;
 
     case "/index.html":
+    case "/":
       populateCarousel();
       setButton();
 
