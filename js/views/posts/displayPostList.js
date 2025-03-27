@@ -42,7 +42,7 @@ export function renderPosts(posts, selector) {
       console.log(posts);
     });
   } catch (error) {
-    errorMessage.innerHTML = displayErrorMessage("there was an error");
+    // errorMessage.innerHTML = displayErrorMessage("there was an error");
   }
 }
 
