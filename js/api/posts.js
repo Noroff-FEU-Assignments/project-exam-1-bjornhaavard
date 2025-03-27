@@ -31,7 +31,7 @@ export async function getPostDetails(postId) {
     return postDetails;
   } catch (error) {
     console.log(error);
-    errorMessage.innerHTML = "There was an error";
+    errorMessage.innerHTML = "!!!There was an error!!!";
   }
 }
 

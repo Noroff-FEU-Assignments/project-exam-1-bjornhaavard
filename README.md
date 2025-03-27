@@ -1,16 +1,26 @@
+# PewPewBlog
+
 ## Project Exam 1
 
-## Goal
 
-To put into practice the skills learned over your first year of studies.
+![image](https://github.com/Noroff-FEU-Assignments/project-exam-1-bjornhaavard/assets/94046432/c3126ea7-b4fa-4904-bf10-1ea99edb99b8)
 
-## Brief
-You have been tasked with creating a blog site. You can choose the design and topics covered on the blog, but it should have at least the following pages:
+To put into practice the skills learned over my first year of studies.
+
+## Description
+I was tasked with creating a blog site. I could choose the design and topics covered on the blog, but it should have at least the following pages:
+
 -	Home page
 -	About page
 -	List of blog posts
 -	Blog post specific pages
 -	Contact page.
+
+## Built With:
+
+- HTML
+- CSS
+- JavaScript
 
 ### Home Page
 The home page should have a ‘Latest Posts’ section which uses a carousel (slider) for users to click to view more posts. For example, by default the user can see four posts, then they can click an arrow on the right to view the next four posts, and click it again to view the next four posts. The user can also click back to view results they had previously seen. This must be implemented for desktop at least, but if you want a simpler layout for mobile, you can change it from being in a carousel.
@@ -45,23 +55,17 @@ The project has two aspects:
 
 You will need to add at least 12 blogs for your website. You can use lorem ipsum for paragraphs if you need, but headings, images etc. should all make sense.
 
-Note that this is an exam, and therefore tutor support will be limited as per the study plan.
+## Getting Started
 
-## Level 1 Process
+### Installing
 
-1.	Decide on the theme for the blog you’re going to make
-2.	Create a prototype of the website
-3.	Install WordPress on your web host and add the blogs on the admin panel. 
-4.	Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
-5.	Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
-6.	Install Hotjar on your website.
-7.	Ask users to test your website, and adjust based on their feedback and any insights from Hotjar.
-8.	Write a report documenting your project (template provided in this repository).
-9.	Submit your report as a PDF and a link to both your Netlify deployment and your GitHub repo.
- 
-## Level 2 Process (optional)
+Clone the repo: ``` https://github.com/Noroff-FEU-Assignments/project-exam-1-bjornhaavard ```
 
-1.	You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for. 
-2.	Post the data from the contact form to WordPress so you have the details saved.
-3.	Allow users to submit comments on a blog post, and post this data to WordPress
+## Contact
+
+Here is some of my contact information
+
+[My Instagram page](https://www.instagram.com/bjornhaavardsteinnes/)
+
+[My LinkedIn page](https://www.linkedin.com/in/bj%C3%B8rn-h%C3%A5vard-steinnes-87333b21a/)
 

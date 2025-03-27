@@ -11,11 +11,11 @@
 .breadcrumbs-item:not(:last-of-type)::after {
   content: "-->";
   margin: 0px 5px;
-  color: rgb(117, 117, 117);
+  color: rgb(168, 168, 168);
 }
 
 .breadcrumbs-link {
-  color: rgb(117, 117, 117);
+  color: rgb(168, 168, 168);
 }
 
 .breadcrumbs-link:hover {

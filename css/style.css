@@ -31,6 +31,10 @@ body {
   /* font-size: 3rem; */
 }
 
+.main {
+  margin-top: 3rem;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -47,13 +51,17 @@ img {
 }
 
 h1 {
-  font-family: monospace;
   font-size: 3rem;
 }
 
 h2 {
   font-size: 2rem;
   margin-bottom: var(--standard-padding);
+}
+
+#logo {
+  font-size: 3rem;
+  font-family: monospace;
 }
 
 .nav-selected {
@@ -105,12 +113,7 @@ h2 {
   background-color: #383737;
   color: white;
   border-radius: 0%;
-  /* margin: 1rem auto; */
 }
-
-/* .cat-button:active {
-  border: solid 2px white;
-} */
 
 .button-container {
   display: flex;
@@ -124,8 +127,9 @@ h2 {
   text-align: left;
   font-size: 1.3rem;
   padding: 4rem 2rem 2rem 2rem;
-
-  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  /* justify-content: center; */
 }
 
 .welcome-text {
@@ -154,7 +158,8 @@ h2 {
 }
 
 .index-about img {
-  width: 80vw;
+  max-width: 600px;
+  margin-top: 5rem;
   filter: grayscale(0.9) contrast(2);
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
@@ -162,7 +167,7 @@ h2 {
 .index-about button {
   position: absolute;
   top: 50%;
-  left: calc(50% - 100px);
+  margin: 0 auto;
 }
 
 @media (max-width: 790px) {
@@ -177,6 +182,7 @@ h2 {
     display: flex;
   }
 
+  #logo,
   h1 {
     font-size: 1.9rem;
   }

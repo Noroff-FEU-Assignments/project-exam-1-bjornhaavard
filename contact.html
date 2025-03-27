@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="If you want to contact me you can do it here">
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
     <title>PewPewLife | Contact</title>
     <!-- Hotjar Tracking Code for pewpewlife -->
     <script>
@@ -28,7 +32,7 @@
     <header>
       <div class="before-nav-contact" aria-label="background image of some mountains with a dark filter">
         <a href="index.html">
-          <h1>PewPewLife</h1>
+          <h3 id="logo">PewPewLife</h3>
         </a>
         <nav class="nav">
           <div class="nav-menu">
@@ -64,7 +68,7 @@
       </ul>
       <section class="contact-container">
        <section class="contact-section">
-        <h2>Contact me here</h2>
+        <h1>Contact me here</h1>
         <form id="contactForm" method="get">
           <div class="flex-1">
           <div>
@@ -96,7 +100,7 @@
             <div class="form-error" id="textError">message must be over 25 characters</div>
           </div>
           <div class="messageContainer" id="messageSent"></div>
-          <button id="submit">Submit</button>
+          <button aria-label="press this to submit" id="submit">Submit</button>
         </form>
       </div>
       </section>
@@ -106,19 +110,19 @@
       <div class="footer">
         Powered by Wordpress API
         <div class="nav-media">
-          <a href="https://www.facebook.com/"
+          <a href="https://www.facebook.com/" aria-label="link to facebook"
             ><svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64px" height="64px">
               <path
                 d="M48,7H16c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8h17V38h-6v-7h6v-5c0-7,4-11,10-11c3.133,0,5,1,5,1v6h-4 c-2.86,0-4,2.093-4,4v5h7l-1,7h-6v17h8c4.418,0,8-3.582,8-8V15C56,10.582,52.418,7,48,7z"
               /></svg
           ></a>
-          <a href="https://www.instagram.com/"
+          <a href="https://www.instagram.com/" aria-label="link to instagram"
             ><svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64px" height="64px">
               <path
                 d="M 21.580078 7 C 13.541078 7 7 13.544938 7 21.585938 L 7 42.417969 C 7 50.457969 13.544938 57 21.585938 57 L 42.417969 57 C 50.457969 57 57 50.455062 57 42.414062 L 57 21.580078 C 57 13.541078 50.455062 7 42.414062 7 L 21.580078 7 z M 47 15 C 48.104 15 49 15.896 49 17 C 49 18.104 48.104 19 47 19 C 45.896 19 45 18.104 45 17 C 45 15.896 45.896 15 47 15 z M 32 19 C 39.17 19 45 24.83 45 32 C 45 39.17 39.169 45 32 45 C 24.83 45 19 39.169 19 32 C 19 24.831 24.83 19 32 19 z M 32 23 C 27.029 23 23 27.029 23 32 C 23 36.971 27.029 41 32 41 C 36.971 41 41 36.971 41 32 C 41 27.029 36.971 23 32 23 z"
               /></svg
           ></a>
-          <a href="https://www.youtube.com/"
+          <a href="https://www.youtube.com/" aria-label="link to youtube"
             ><svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64px" height="64px">
               <path
                 d="M56.456,17.442c-0.339-1.44-1.421-2.595-2.866-3.053C49.761,13.174,41.454,12,32,12s-17.761,1.174-21.591,2.389 c-1.445,0.458-2.527,1.613-2.866,3.053C6.903,20.161,6,25.203,6,32c0,6.797,0.903,11.839,1.544,14.558 c0.339,1.44,1.421,2.595,2.866,3.053C14.239,50.826,22.546,52,32,52s17.761-1.174,21.591-2.389 c1.445-0.458,2.527-1.613,2.866-3.053C57.097,43.839,58,38.797,58,32C58,25.203,57.097,20.161,56.456,17.442z M27,40V24l14.857,8 L27,40z"
